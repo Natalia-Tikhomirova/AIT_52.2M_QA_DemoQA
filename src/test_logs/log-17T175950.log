@@ -1,0 +1,2 @@
+17:59:52.119 [main] INFO  demoqa.core.TestBase -- Test is started: [selectOldStyleMenuPositiveTest]
+18:00:11.045 [main] ERROR demoqa.core.TestBase -- Test is FAILED: [selectOldStyleMenuPositiveTest], Screenshot: [C:\AIT_TR_QA\3_DemoQA\src\test_screenshots\screen-1739811611012.png]

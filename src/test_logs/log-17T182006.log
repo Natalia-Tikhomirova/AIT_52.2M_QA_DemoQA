@@ -1,0 +1,2 @@
+18:20:07.493 [main] INFO  demoqa.core.TestBase -- Test is started: [selectOldStyleMenuPositiveTest]
+18:20:14.071 [main] INFO  demoqa.core.TestBase -- Test is PASSED: [selectOldStyleMenuPositiveTest]
