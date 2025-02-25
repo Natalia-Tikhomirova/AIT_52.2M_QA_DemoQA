@@ -41,4 +41,40 @@
             <version>5.9.2</version>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>  <!-- Corrected name -->
+                <version>3.5.2</version>
+                <configuration>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+                    </suiteXmlFiles>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>data</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suiteXmlFile>src/test/resources/data.xml</suiteXmlFile>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>login</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <suiteXmlFile>src/test/resources/login.xml</suiteXmlFile>
+            </properties>
+        </profile>
+    </profiles>
 </project>

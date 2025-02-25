@@ -5,6 +5,7 @@ import demoqa.pages.HomePage;
 import demoqa.pages.PracticeFormPage;
 import demoqa.pages.SidePanel;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class PracticeFormTests extends TestBase {
@@ -21,15 +22,35 @@ public class PracticeFormTests extends TestBase {
                 .selectGender("Female")
                 //.chooseDateAsString("04 May 1965")
                 .chooseDate("04", "May", "1965")
+                .enterCurrentAddress("Portishead, Bristol, UK")
                 .enterSubjects(new String[]{"Maths", "English"})
                 .chooseHobbies(new String[]{"Sports", "Music"})
                 .uploadPicture("C:\\AIT_TR_QA\\HerokuApp\\Лось.png")
+                .enterCurrentAddress("Portishead, Bristol, UK")
+                .enterState("NCR")
+                .enterCity("Delhi")
+                .submitForm()
+                .verifySuccessRegistration("Thanks for submitting the form")
+        ;
+    }
 
-//                .enterCurrentAddress("Portishead, Bristol, UK")
-//                .enterState("NCR")
-//                .enterCity("Delhi")
-//                .submitForm()
-//                .verifySuccessRegistration("Thanks for submitting the form")
+    @Test
+    @Parameters({"firstName", "lastName", "email", "phone"})
+    public void practiceFormParameterPositiveTest(String firstName, String lastName, String email, String phone) {
+        new PracticeFormPage(app.driver, app.wait)
+                .enterPersonalData(firstName, lastName, System.currentTimeMillis()+email, phone)
+                .selectGender("Female")
+                //.chooseDateAsString("04 May 1965")
+                .chooseDate("04", "May", "1965")
+                .enterCurrentAddress("Portishead, Bristol, UK")
+                .enterSubjects(new String[]{"Maths", "English"})
+                .chooseHobbies(new String[]{"Sports", "Music"})
+                .uploadPicture("C:\\AIT_TR_QA\\HerokuApp\\Лось.png")
+                .enterCurrentAddress("Portishead, Bristol, UK")
+                .enterState("NCR")
+                .enterCity("Delhi")
+                .submitForm()
+                .verifySuccessRegistration("Thanks for submitting the form")
         ;
     }
 }
