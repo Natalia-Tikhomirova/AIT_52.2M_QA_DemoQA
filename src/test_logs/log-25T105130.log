@@ -1,0 +1,3 @@
+10:51:30.859 [main] INFO  demoqa.core.TestBase -- Test is started: [practiceFormParameterPositiveTest]
+10:51:33.549 [main] INFO  i.g.b.wdm.online.Downloader -- Downloading https://msedgewebdriverstorage.blob.core.windows.net/edgewebdriver/133.0.3065.82/edgedriver_win64.zip
+10:51:37.956 [main] INFO  i.g.b.wdm.online.Downloader -- Extracting driver from compressed file edgedriver_win64.zip
